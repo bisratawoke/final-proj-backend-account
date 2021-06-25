@@ -20,7 +20,10 @@ const serviceRouter = require('./src/routers/serviceRouter.js');
 app.use('/api/account/service',serviceRouter);
 app.use('/api/account',accountRouter);
 
+app.get('/',(req,res) => {
 
+	return res.json({mssg:'hello world'})
+})
 //starting app
 
 app.listen(PORT,() => console.log(`[Server] started on port ${PORT}`));
