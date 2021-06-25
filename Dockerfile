@@ -1,4 +1,4 @@
-FROM nodejscn/node 
+FROM node:16-alpine
 
 WORKDIR /usr/bin/app
 
