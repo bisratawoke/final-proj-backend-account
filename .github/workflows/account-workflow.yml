@@ -25,3 +25,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm i
     - run: npm run dev
+    - run: sudo docker build -t account .
+    - run: sudo docker run --name account -p 5000:5000 -d account
