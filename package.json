@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pm2 restart app.js"
+    "dev": "pm2 start app.js --name app"
   },
   "keywords": [],
   "author": "",
