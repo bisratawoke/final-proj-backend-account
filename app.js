@@ -15,15 +15,17 @@ const accountRouter = require('./src/routers/accountRouter.js');
 //importing account service router
 const serviceRouter = require('./src/routers/serviceRouter.js');
 
+
+app.get('/api/account/test',(req,res) => {
+
+	return res.json({mssg:'hello world'})
+})
 //including custom routers
 
 app.use('/api/account/service',serviceRouter);
 app.use('/api/account',accountRouter);
 
-app.get('/api',(req,res) => {
 
-	return res.json({mssg:'hello world'})
-})
 //starting app
 
 app.listen(PORT,() => console.log(`[Server] started on port ${PORT}`));
