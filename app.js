@@ -20,7 +20,7 @@ const serviceRouter = require('./src/routers/serviceRouter.js');
 app.use('/api/account/service',serviceRouter);
 app.use('/api/account',accountRouter);
 
-app.get('/',(req,res) => {
+app.get('/api',(req,res) => {
 
 	return res.json({mssg:'hello world'})
 })
