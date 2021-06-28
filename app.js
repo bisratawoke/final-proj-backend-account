@@ -3,11 +3,12 @@ const app = express();
 require('dotenv').config();
 const PORT = process.env.PORT;
 const helmet = require('helmet');
+const cors = require('cors');
 //express middlewares
 
 app.use(express.json());
 app.use(helmet());
-
+app.use(cors());
 //custom routers 
 //importing account router
 const accountRouter = require('./src/routers/accountRouter.js');
